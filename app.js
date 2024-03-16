@@ -1,13 +1,20 @@
 import React from 'react';
+import { View, StyleSheet } from 'react-native';
 import Calculator from './kalkulator';
 
-const App = () => {
+export default function App() {
   return (
-    <div>
-      <h1>Prosty kalkulator</h1>
+    <View style={styles.container}>
       <Calculator />
-    </div>
+    </View>
   );
-};
+}
 
-export default App;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+});
